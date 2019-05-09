@@ -14,7 +14,7 @@ namespace IronSpeedCrypto
         public Crypto()
         {
             this.bytIV = ApplicationSettings.Current.DefaultEncryptionKey;
-            this._CryptoService = (SymmetricAlgorithm)new RijndaelManaged();
+            this._CryptoService = new RijndaelManaged();
         }
 
         private byte[] GetLegalKey(string Key)
